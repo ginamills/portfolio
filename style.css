@@ -14,19 +14,56 @@
 
 body {
   margin: 0;
-  background: var(--white);
+  background: linear-gradient(90deg, #e9ebf3 0%, var(--white) 20%, var(--white) 80%, #e9ebf3 100%);
   color: var(--grey);
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.data-bg {
+  position: fixed;
+  top: 0;
+  width: 180px;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 0;
+  background:
+    radial-gradient(circle, var(--gold) 1px, transparent 2px),
+    linear-gradient(180deg, transparent 0%, rgba(162, 136, 72, 0.2) 50%, transparent 100%);
+  background-size: 36px 36px, 100% 100%;
+  animation: floatData 9s ease-in-out infinite alternate;
+}
+
+.data-bg-left {
+  left: 0;
+}
+
+.data-bg-right {
+  right: 0;
+  animation-delay: 2s;
+}
+
+@keyframes floatData {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px);
+  }
 }
 
 .page {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 320px 1fr;
   max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
   background: var(--white);
+  box-shadow: 0 0 40px rgba(44, 58, 75, 0.08);
 }
 
 .sidebar {
@@ -134,7 +171,18 @@ ul {
   box-shadow: 0 8px 24px rgba(44, 58, 75, 0.08);
 }
 
+.divider {
+  width: 120px;
+  height: 3px;
+  background: var(--gold);
+  margin: 30px 0;
+}
+
 @media (max-width: 800px) {
+  .data-bg {
+    display: none;
+  }
+
   .page {
     grid-template-columns: 1fr;
   }
@@ -150,11 +198,4 @@ ul {
   h1 {
     font-size: 4.5rem;
   }
-}
-
-.divider {
-  width: 120px;
-  height: 3px;
-  background: var(--gold);
-  margin: 30px 0;
 }
