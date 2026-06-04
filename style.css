@@ -8,16 +8,146 @@
   --sidebar-text: #bcbec0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: var(--white);
   color: var(--grey);
   font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--white);
+}
+
+.sidebar {
+  background: var(--navy);
+  color: var(--sidebar-text);
+  padding: 48px 36px;
+}
+
+.photo-placeholder {
+  width: 180px;
+  height: 180px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  margin: 0 auto 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.content {
+  padding: 60px 70px;
 }
 
 h1 {
   font-family: 'Bebas Neue', sans-serif;
   color: var(--navy);
-  font-size: 4rem;
+  font-size: 6rem;
+  line-height: 0.9;
+  letter-spacing: 4px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
   letter-spacing: 2px;
+  color: var(--gold);
+  margin-top: 42px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.sidebar h2 {
+  color: var(--gold);
+}
+
+.sidebar a {
+  color: var(--sidebar-text);
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+.eyebrow,
+.tools {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.intro {
+  max-width: 620px;
+  font-size: 1.15rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 22px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cards {
+  display: grid;
+  gap: 18px;
+}
+
+.card,
+.timeline article {
+  border-left: 4px solid var(--gold);
+  background: #ffffff;
+  padding: 22px 24px;
+  box-shadow: 0 8px 24px rgba(44, 58, 75, 0.08);
+}
+
+@media (max-width: 800px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 40px 28px;
+  }
+
+  .sidebar {
+    padding: 40px 28px;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
 }
