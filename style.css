@@ -21,19 +21,63 @@ body {
   overflow-x: hidden;
 }
 
-.data-bg {
+.chart-bg {
   position: fixed;
   top: 0;
   width: 180px;
   height: 100vh;
   pointer-events: none;
-  opacity: 0.35;
   z-index: 0;
-  background:
-    radial-gradient(circle, var(--gold) 1px, transparent 2px),
-    linear-gradient(180deg, transparent 0%, rgba(162, 136, 72, 0.2) 50%, transparent 100%);
-  background-size: 36px 36px, 100% 100%;
-  animation: floatData 9s ease-in-out infinite alternate;
+  opacity: 0.28;
+}
+
+.chart-bg-left {
+  left: 18px;
+}
+
+.chart-bg-right {
+  right: 18px;
+}
+
+.chart-line {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2;
+  stroke-dasharray: 6 10;
+}
+
+.chart-point {
+  fill: var(--gold);
+  animation: pulsePoint 3s ease-in-out infinite;
+}
+
+.chart-bg-left .chart-point {
+  transform-origin: center;
+  animation-delay: 0.2s;
+}
+
+.chart-bg-right .chart-point {
+  animation-delay: 0.8s;
+}
+
+@keyframes pulsePoint {
+  0%, 100% {
+    r: 3;
+    opacity: 0.45;
+  }
+
+  50% {
+    r: 6;
+    opacity: 1;
+  }
+}
+
+body.scrolled .chart-bg-left {
+  transform: translateY(-40px);
+}
+
+body.scrolled .chart-bg-right {
+  transform: translateY(40px);
 }
 
 .data-bg-left {
