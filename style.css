@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap');
+
+:root {
+  --navy: #2c3a4b;
+  --gold: #a28848;
+  --white: #f7f7fc;
+  --grey: #808183;
+  --sidebar-text: #bcbec0;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--grey);
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--navy);
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
