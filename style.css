@@ -35,19 +35,19 @@ body {
   padding: 48px 36px;
 }
 
-.photo-placeholder {
+.photo {
   width: 180px;
   height: 180px;
-  border: 2px solid var(--gold);
-  border-radius: 50%;
   margin: 0 auto 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  letter-spacing: 2px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: block;
 }
 
 .content {
