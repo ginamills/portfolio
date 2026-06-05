@@ -425,3 +425,28 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.contact-item svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--gold);
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: var(--white);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.contact-item a:hover {
+  opacity: 0.8;
+}
