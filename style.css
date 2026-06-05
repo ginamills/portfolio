@@ -361,6 +361,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 14px;
+  margin-bottom: 24px;
 }
 
 .section-heading h2 {
