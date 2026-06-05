@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Centre Performance Dashboard | Gina Mills</title>
   <link rel="stylesheet" href="../style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="project-body">
@@ -25,7 +26,10 @@
       </header>
 
       <section class="problem-panel">
-        <div class="section-icon">🎯</div>
+        <div class="project-icon">
+          <i data-lucide="target"></i>
+        </div>
+
         <div>
           <h2>Business Problem</h2>
           <p>
@@ -38,9 +42,12 @@
 
       <section class="dashboard-section">
         <div class="section-heading">
-          <span class="section-icon">📊</span>
+          <div class="project-icon">
+            <i data-lucide="layout-dashboard"></i>
+          </div>
           <h2>Dashboard Preview</h2>
         </div>
+
         <div class="dashboard-preview">
           Dashboard Preview Coming Soon
         </div>
@@ -48,8 +55,13 @@
 
       <section class="analysis-grid">
         <article class="analysis-card">
-          <div class="section-icon">❓</div>
-          <h2>Questions Asked</h2>
+          <div class="section-heading">
+            <div class="project-icon">
+              <i data-lucide="circle-help"></i>
+            </div>
+            <h2>Questions Asked</h2>
+          </div>
+
           <ul>
             <li>Which time periods show the highest queue pressure?</li>
             <li>What patterns appear across SLA, occupancy, and abandoned contacts?</li>
@@ -58,8 +70,13 @@
         </article>
 
         <article class="analysis-card">
-          <div class="section-icon">📈</div>
-          <h2>Key Metrics</h2>
+          <div class="section-heading">
+            <div class="project-icon">
+              <i data-lucide="chart-column"></i>
+            </div>
+            <h2>Key Metrics</h2>
+          </div>
+
           <ul>
             <li>Service Level</li>
             <li>Occupancy</li>
@@ -72,8 +89,13 @@
 
       <section class="insight-section">
         <article>
-          <div class="section-icon">💡</div>
-          <h2>Key Findings</h2>
+          <div class="section-heading">
+            <div class="project-icon">
+              <i data-lucide="lightbulb"></i>
+            </div>
+            <h2>Key Findings</h2>
+          </div>
+
           <p>
             Findings will be added once the dataset has been analysed. This section will summarise
             the main operational patterns, pressure points, and performance trends identified in the data.
@@ -81,8 +103,13 @@
         </article>
 
         <article>
-          <div class="section-icon">🚀</div>
-          <h2>Recommendations</h2>
+          <div class="section-heading">
+            <div class="project-icon">
+              <i data-lucide="rocket"></i>
+            </div>
+            <h2>Recommendations</h2>
+          </div>
+
           <p>
             Recommendations will be added after the analysis is complete, with a focus on practical
             actions that could improve staffing alignment, queue visibility, and service performance.
@@ -91,12 +118,19 @@
       </section>
 
       <section class="tools-panel">
-        <span class="section-icon">🛠</span>
+        <div class="project-icon">
+          <i data-lucide="wrench"></i>
+        </div>
+
         <p><strong>Tools:</strong> Excel • Power BI • Workforce Analytics • KPI Reporting</p>
       </section>
 
     </div>
   </main>
+
+  <script>
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>
