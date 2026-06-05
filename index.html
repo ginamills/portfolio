@@ -1,260 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gina Mills | Data Analytics Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap');
 
-<body>
+:root {
+  --navy: #2c3a4b;
+  --gold: #a28848;
+  --white: #f7f7fc;
+  --grey: #808183;
+  --sidebar-text: #bcbec0;
+}
 
-  <svg class="radar-web radar-web-left" aria-hidden="true"></svg>
-  <svg class="radar-web radar-web-right" aria-hidden="true"></svg>
+* {
+  box-sizing: border-box;
+}
 
-  <main class="page">
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #e9ebf3 0%, var(--white) 20%, var(--white) 80%, #e9ebf3 100%);
+  color: var(--grey);
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-    <aside class="sidebar">
-      <div class="photo">
-        <img src="images/headshot.jpg" alt="Gina Mills">
-      </div>
+.radar-web {
+  position: fixed;
+  top: 0;
+  width: 620px;
+  height: 100vh;
+  pointer-events: auto;
+  z-index: 0;
+  opacity: 0.68;
+  transition: transform 0.25s ease-out;
+}
 
-      <section>
-        <h2>About Me</h2>
-        <p>
-          Experienced workforce and operational analytics professional with a background in
-          real-time performance monitoring, reporting, forecasting support, and business insights
-          across global customer experience operations.
-        </p>
-        <p>
-          I combine analytical thinking with a Visual Communication Design background to create
-          reporting that is clear, useful, and easy to understand.
-        </p>
-      </section>
+.radar-web-left {
+  left: -420px;
+}
 
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>SQL</li>
-          <li>Power BI</li>
-          <li>Excel</li>
-          <li>Workforce Analytics</li>
-          <li>Data Visualisation</li>
-          <li>Customer Experience Analytics</li>
-        </ul>
-      </section>
+.radar-web-right {
+  right: -420px;
+}
 
-      <section>
-        <h2>Contact</h2>
-        <p><a href="mailto:ginamariamills@gmail.com">ginamariamills@gmail.com</a></p>
-        <p><a href="https://www.linkedin.com/in/gina-mills/" target="_blank">LinkedIn</a></p>
-        <p><a href="https://github.com/ginamills" target="_blank">GitHub</a></p>
-      </section>
-    </aside>
+.radar-group {
+  transform-origin: center;
+  transition: transform 0.35s ease-out;
+}
 
-    <section class="content">
-      <header class="hero">
-        <p class="eyebrow">Business Insight & Data Analytics</p>
-        <h1>Gina<br>Mills</h1>
-        <p class="intro">
-          I create clear, practical reporting that helps teams understand performance,
-          identify pressure points, and make better operational decisions.
-        </p>
-        <div class="divider"></div>
-        <a class="button" href="./docs/Gina_Mills_CV.pdf" target="_blank">Download Resume</a>
-      </header>
+.radar-grid-ring {
+  fill: transparent;
+  stroke: var(--gold);
+  stroke-width: 1;
+  stroke-dasharray: 4 9;
+  opacity: 0.62;
+}
 
-      <section>
-        <h2>Featured Analytics Case Studies</h2>
+.radar-axis {
+  stroke: var(--gold);
+  stroke-width: 1;
+  opacity: 0.30;
+}
 
-        <div class="cards">
-          <article class="card">
-            <h3>Customer Experience Dashboard</h3>
-            <p class="tools">Power BI • Excel • Customer Insights</p>
-            <p>
-              Analysing customer reviews, satisfaction scores, and support trends
-              to identify drivers of customer experience.
-            </p>
-          </article>
+.radar-data-shape {
+  fill: rgba(162, 136, 72, 0.055);
+  stroke: var(--gold);
+  stroke-width: 1.6;
+  opacity: 0.85;
+}
 
-          <article class="card">
-            <h3>Contact Centre Performance Dashboard</h3>
-            <p class="tools">Excel • Workforce Analytics • KPI Reporting</p>
-            <p>
-              Exploring SLA performance, queue demand, occupancy, and operational
-              pressure points across contact centre data.
-            </p>
-          </article>
+.radar-data-shape-b {
+  fill: rgba(162, 136, 72, 0.035);
+  stroke-width: 1.25;
+  opacity: 0.62;
+}
 
-          <article class="card">
-            <h3>Workforce Planning Dashboard</h3>
-            <p class="tools">Power BI • Forecasting • Planning</p>
-            <p>
-              Investigating staffing gaps, workload patterns, and forecasting
-              opportunities using workforce and demand data.
-            </p>
-          </article>
-        </div>
-      </section>
+.radar-data-shape-c {
+  fill: rgba(162, 136, 72, 0.02);
+  stroke-width: 1;
+  opacity: 0.45;
+}
 
-      <section>
-        <h2>Experience</h2>
-        <div class="timeline">
-          <article>
-            <h3>Fisher & Paykel Appliances</h3>
-            <p class="tools">Real-Time / Workforce Analytics</p>
-            <p>
-              Supported global customer experience operations through real-time monitoring,
-              performance reporting, workforce coordination, and stakeholder updates across
-              multiple markets and service queues.
-            </p>
-            <p>
-              Worked with operational data including service levels, occupancy, adherence,
-              queue demand, scheduling impacts, and daily performance trends.
-            </p>
-          </article>
-        </div>
-      </section>
+.radar-dot {
+  fill: var(--gold);
+  stroke: none;
+  opacity: 0.9;
+}
 
-      <section>
-        <h2>Education</h2>
-        <h3>Bachelor of Visual Communication Design</h3>
-        <p>Massey University Wellington</p>
-      </section>
-    </section>
+.page {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--white);
+  box-shadow: 0 0 40px rgba(44, 58, 75, 0.08);
+}
 
-  </main>
+.sidebar {
+  background: var(--navy);
+  color: var(--sidebar-text);
+  padding: 48px 36px;
+}
 
-  <script>
-    function createRadarChart(svg, side) {
-      const centerX = side === "left" ? 640 : -120;
-      const centerY = 500;
-      const axes = 8;
-      const rings = 6;
-      const ringGap = 75;
+.photo {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 40px;
+}
 
-      svg.setAttribute("viewBox", "0 0 520 1000");
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: block;
+}
 
-      const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
-      group.classList.add("radar-group");
-      svg.appendChild(group);
+.content {
+  padding: 60px 70px;
+}
 
-      function pointAt(axis, value) {
-        const angle = (Math.PI * 2 * axis) / axes - Math.PI / 2;
-        const radius = value * ringGap;
-        return {
-          x: centerX + Math.cos(angle) * radius,
-          y: centerY + Math.sin(angle) * radius
-        };
-      }
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--navy);
+  font-size: 6rem;
+  line-height: 0.9;
+  letter-spacing: 4px;
+  margin: 0 0 24px;
+}
 
-      for (let r = 1; r <= rings; r++) {
-        let ringPoints = [];
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-top: 42px;
+  margin-bottom: 16px;
+}
 
-        for (let i = 0; i < axes; i++) {
-          const p = pointAt(i, r);
-          ringPoints.push(`${p.x},${p.y}`);
-        }
+h3 {
+  color: var(--navy);
+  margin-bottom: 4px;
+}
 
-        const ring = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-        ring.setAttribute("points", ringPoints.join(" "));
-        ring.classList.add("radar-grid-ring");
-        group.appendChild(ring);
-      }
+.sidebar h2 {
+  color: var(--gold);
+}
 
-      for (let i = 0; i < axes; i++) {
-        const outer = pointAt(i, rings);
+.sidebar a {
+  color: var(--sidebar-text);
+}
 
-        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("x1", centerX);
-        line.setAttribute("y1", centerY);
-        line.setAttribute("x2", outer.x);
-        line.setAttribute("y2", outer.y);
-        line.classList.add("radar-axis");
-        group.appendChild(line);
-      }
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
 
-      const shapeA = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-      shapeA.classList.add("radar-data-shape", "radar-data-shape-a");
-      group.appendChild(shapeA);
+ul {
+  padding-left: 18px;
+}
 
-      const shapeB = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-      shapeB.classList.add("radar-data-shape", "radar-data-shape-b");
-      group.appendChild(shapeB);
+.eyebrow,
+.tools {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
 
-      const dots = [];
+.intro {
+  max-width: 620px;
+  font-size: 1.15rem;
+}
 
-      for (let i = 0; i < axes * 2; i++) {
-        const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        dot.setAttribute("r", i < axes ? 4 : 3);
-        dot.classList.add("radar-dot");
-        group.appendChild(dot);
-        dots.push(dot);
-      }
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 22px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-      function updateShape(time, scrollShift) {
-        const valuesA = [];
-        const valuesB = [];
+.cards {
+  display: grid;
+  gap: 18px;
+}
 
-        for (let i = 0; i < axes; i++) {
-          valuesA.push(2.7 + Math.sin(time * 0.0012 + i * 0.9 + scrollShift) * 1.2);
-          valuesB.push(2.2 + Math.cos(time * 0.001 + i * 1.15 + scrollShift) * 1.4);
-        }
+.card,
+.timeline article {
+  border-left: 4px solid var(--gold);
+  background: #ffffff;
+  padding: 22px 24px;
+  box-shadow: 0 8px 24px rgba(44, 58, 75, 0.08);
+}
 
-        const pointsA = valuesA.map((value, i) => pointAt(i, Math.max(1.2, Math.min(5.8, value))));
-        const pointsB = valuesB.map((value, i) => pointAt(i, Math.max(1.1, Math.min(5.5, value))));
+.divider {
+  width: 120px;
+  height: 3px;
+  background: var(--gold);
+  margin: 30px 0;
+}
 
-        shapeA.setAttribute("points", pointsA.map(p => `${p.x},${p.y}`).join(" "));
-        shapeB.setAttribute("points", pointsB.map(p => `${p.x},${p.y}`).join(" "));
+@media (max-width: 1100px) {
+  .radar-web {
+    display: none;
+  }
+}
 
-        pointsA.forEach((p, i) => {
-          dots[i].setAttribute("cx", p.x);
-          dots[i].setAttribute("cy", p.y);
-        });
+@media (max-width: 800px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
 
-        pointsB.forEach((p, i) => {
-          dots[i + axes].setAttribute("cx", p.x);
-          dots[i + axes].setAttribute("cy", p.y);
-        });
-      }
+  .content {
+    padding: 40px 28px;
+  }
 
-      function animate(time) {
-        const scrollShift = window.scrollY * 0.004;
-        updateShape(time, scrollShift);
-        requestAnimationFrame(animate);
-      }
+  .sidebar {
+    padding: 40px 28px;
+  }
 
-      requestAnimationFrame(animate);
-
-      svg.addEventListener("mousemove", function (event) {
-        const rect = svg.getBoundingClientRect();
-        const mouseX = event.clientX - rect.left;
-        const mouseY = event.clientY - rect.top;
-
-        const moveX = (mouseX - rect.width / 2) * 0.04;
-        const moveY = (mouseY - rect.height / 2) * 0.04;
-
-        group.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.04)`;
-      });
-
-      svg.addEventListener("mouseleave", function () {
-        group.style.transform = "";
-      });
-    }
-
-    const leftRadar = document.querySelector(".radar-web-left");
-    const rightRadar = document.querySelector(".radar-web-right");
-
-    createRadarChart(leftRadar, "left");
-    createRadarChart(rightRadar, "right");
-
-    window.addEventListener("scroll", function () {
-      const scrollAmount = window.scrollY;
-
-      leftRadar.style.transform = `translateY(${-scrollAmount * 0.08}px) rotate(${scrollAmount * 0.012}deg)`;
-      rightRadar.style.transform = `translateY(${scrollAmount * 0.08}px) rotate(${-scrollAmount * 0.012}deg)`;
-    });
-  </script>
-
-</body>
-</html>
+  h1 {
+    font-size: 4.5rem;
+  }
+}
