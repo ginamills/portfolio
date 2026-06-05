@@ -133,7 +133,7 @@
       const rings = 7;
       const ringGap = 95;
       const phase = side === "left" ? 0 : 1.7;
-      const speed = side === "left" ? 0.00055 : 0.00075;
+      const speed = side === "left" ? 0.00038 : 0.00052;
 
       svg.setAttribute("viewBox", "0 0 620 1100");
 
@@ -271,8 +271,8 @@
     window.addEventListener("scroll", function () {
       const scrollAmount = window.scrollY;
 
-      leftRadar.style.transform = `translateY(${-scrollAmount * 0.08}px) rotate(${scrollAmount * 0.012}deg)`;
-      rightRadar.style.transform = `translateY(${scrollAmount * 0.08}px) rotate(${-scrollAmount * 0.012}deg)`;
+      leftRadar.style.transform = `translateY(${-scrollAmount * 0.055}px) rotate(${scrollAmount * 0.007}deg)`;
+      rightRadar.style.transform = `translateY(${scrollAmount * 0.055}px) rotate(${-scrollAmount * 0.007}deg)`;
     });
   </script>
 
