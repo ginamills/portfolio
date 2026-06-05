@@ -127,27 +127,32 @@
 
   <script>
     function createRadarWeb(svg, side) {
-      const centerX = side === "left" ? 430 : 90;
-      const centerY = 420;
-      const points = 8;
-      const rings = 5;
+      const centerX = side === "left" ? 620 : -100;
+      const centerY = 450;
+      const points = 10;
+      const rings = 8;
+      const ringGap = 62;
 
-      svg.setAttribute("viewBox", "0 0 520 900");
+      svg.setAttribute("viewBox", "0 0 520 1000");
 
       const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
       group.classList.add("radar-group");
       svg.appendChild(group);
 
+      const allPoints = [];
+
       for (let r = 1; r <= rings; r++) {
-        const radius = r * 58;
+        const radius = r * ringGap;
         let polygonPoints = [];
 
         for (let i = 0; i < points; i++) {
           const angle = (Math.PI * 2 * i) / points - Math.PI / 2;
-          const wobble = Math.sin(i * 1.7 + r) * 18;
+          const wobble = Math.sin(i * 1.4 + r * 0.9) * 22;
           const x = centerX + Math.cos(angle) * (radius + wobble);
           const y = centerY + Math.sin(angle) * (radius + wobble);
+
           polygonPoints.push(`${x},${y}`);
+          allPoints.push({ x, y, ring: r, index: i });
         }
 
         const polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
@@ -158,7 +163,7 @@
 
       for (let i = 0; i < points; i++) {
         const angle = (Math.PI * 2 * i) / points - Math.PI / 2;
-        const outerRadius = rings * 58 + 20;
+        const outerRadius = rings * ringGap + 20;
         const x = centerX + Math.cos(angle) * outerRadius;
         const y = centerY + Math.sin(angle) * outerRadius;
 
@@ -169,20 +174,28 @@
         line.setAttribute("y2", y);
         line.classList.add("radar-spoke");
         group.appendChild(line);
+      }
+
+      allPoints.forEach(function (point) {
+        if (point.ring < 3) return;
 
         const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        dot.setAttribute("cx", x);
-        dot.setAttribute("cy", y);
-        dot.setAttribute("r", 4);
+        dot.setAttribute("cx", point.x);
+        dot.setAttribute("cy", point.y);
+        dot.setAttribute("r", point.ring === rings ? 5 : 3);
         dot.classList.add("radar-dot");
         group.appendChild(dot);
-      }
+      });
 
       svg.addEventListener("mousemove", function (event) {
         const rect = svg.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        group.style.transform = `translate(${(x - rect.width / 2) * 0.03}px, ${(y - rect.height / 2) * 0.03}px) scale(1.04)`;
+        const mouseX = event.clientX - rect.left;
+        const mouseY = event.clientY - rect.top;
+
+        const moveX = (mouseX - rect.width / 2) * 0.045;
+        const moveY = (mouseY - rect.height / 2) * 0.045;
+
+        group.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.06) rotate(${side === "left" ? -1.5 : 1.5}deg)`;
       });
 
       svg.addEventListener("mouseleave", function () {
@@ -199,8 +212,8 @@
     window.addEventListener("scroll", function () {
       const scrollAmount = window.scrollY;
 
-      leftRadar.style.transform = `translateY(${-scrollAmount * 0.08}px) rotate(${scrollAmount * 0.015}deg)`;
-      rightRadar.style.transform = `translateY(${scrollAmount * 0.08}px) rotate(${-scrollAmount * 0.015}deg)`;
+      leftRadar.style.transform = `translateY(${-scrollAmount * 0.10}px) rotate(${scrollAmount * 0.018}deg) scale(${1 + scrollAmount * 0.00004})`;
+      rightRadar.style.transform = `translateY(${scrollAmount * 0.10}px) rotate(${-scrollAmount * 0.018}deg) scale(${1 + scrollAmount * 0.00004})`;
     });
   </script>
 
