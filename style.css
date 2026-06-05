@@ -28,7 +28,7 @@ body {
   height: 100vh;
   pointer-events: auto;
   z-index: 0;
-  opacity: 0.38;
+  opacity: 0.55;
   transition: transform 0.25s ease-out;
 }
 
@@ -50,25 +50,25 @@ body {
   stroke: var(--gold);
   stroke-width: 1.2;
   stroke-dasharray: 4 8;
-  opacity: 0.55;
+  opacity: 0.75;
 }
 
 .radar-spoke {
   stroke: var(--gold);
   stroke-width: 1;
-  opacity: 0.28;
+  opacity: 0.40;
 }
 
 .radar-dot {
   fill: var(--gold);
-  opacity: 0.9;
+  opacity: 1;
   animation: dotPulse 3s ease-in-out infinite;
 }
 
 @keyframes dotPulse {
   0%, 100% {
     r: 3;
-    opacity: 0.55;
+    opacity: 0.65;
   }
 
   50% {
