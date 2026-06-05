@@ -102,6 +102,32 @@ body {
   padding: 48px 36px;
 }
 
+.skill-group {
+  margin-top: 8px;
+}
+
+.skill {
+  margin-bottom: 18px;
+}
+
+.skill-label {
+  color: var(--sidebar-text);
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.20);
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: var(--gold);
+}
+
 .photo {
   width: 180px;
   height: 180px;
