@@ -363,12 +363,17 @@ ul {
   gap: 14px;
 }
 
+.dashboard-section .section-heading {
+  margin-bottom: 22px;
+}
+
 .section-heading h2 {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .dashboard-preview {
-  min-height: 320px;
+  min-height: 280px;
   border: 1px dashed rgba(162, 136, 72, 0.55);
   display: flex;
   align-items: center;
