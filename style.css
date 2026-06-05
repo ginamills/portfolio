@@ -231,3 +231,24 @@ ul {
     font-size: 4.5rem;
   }
 }
+
+.card-link {
+  display: block;
+  color: var(--grey);
+}
+
+.card-link h3 {
+  color: var(--navy);
+}
+
+.card-link p {
+  color: var(--grey);
+}
+
+.card-link .tools {
+  color: var(--gold);
+}
+
+.card-link:hover {
+  transform: translateY(-3px);
+}
