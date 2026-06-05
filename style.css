@@ -1,7 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700&display=swap');
+
+:root {
+  --navy: #2c3a4b;
+  --gold: #a28848;
+  --white: #f7f7fc;
+  --grey: #808183;
+  --sidebar-text: #bcbec0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #e9ebf3 0%, var(--white) 20%, var(--white) 80%, #e9ebf3 100%);
+  color: var(--grey);
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.radar-web {
+  position: fixed;
+  top: 0;
+  width: 620px;
+  height: 100vh;
+  pointer-events: auto;
+  z-index: 0;
+  opacity: 0.68;
+  transition: transform 0.25s ease-out;
+}
+
+.radar-web-left {
+  left: -420px;
+}
+
+.radar-web-right {
+  right: -420px;
+}
+
+.radar-group {
+  transform-origin: center;
+  transition: transform 0.35s ease-out;
+}
+
+.radar-grid-ring {
+  fill: transparent;
+  stroke: var(--gold);
+  stroke-width: 1;
+  stroke-dasharray: 4 9;
+  opacity: 0.62;
+}
+
+.radar-axis {
+  stroke: var(--gold);
+  stroke-width: 1;
+  opacity: 0.30;
+}
+
+.radar-data-shape {
+  fill: rgba(162, 136, 72, 0.055);
+  stroke: var(--gold);
+  stroke-width: 1.6;
+  opacity: 0.85;
+}
+
+.radar-data-shape-b {
+  fill: rgba(162, 136, 72, 0.035);
+  stroke-width: 1.25;
+  opacity: 0.62;
+}
+
+.radar-data-shape-c {
+  fill: rgba(162, 136, 72, 0.02);
+  stroke-width: 1;
+  opacity: 0.45;
+}
+
+.radar-dot {
+  fill: var(--gold);
+  stroke: none;
+  opacity: 0.9;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--white);
+  box-shadow: 0 0 40px rgba(44, 58, 75, 0.08);
+}
+
+.sidebar {
+  background: var(--navy);
+  color: var(--sidebar-text);
+  padding: 48px 36px;
+}
+
+.photo {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 40px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: block;
+}
+
+.content {
+  padding: 60px 70px;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--navy);
+  font-size: 6rem;
+  line-height: 0.9;
+  letter-spacing: 4px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-top: 42px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.sidebar h2 {
+  color: var(--gold);
+}
+
+.sidebar a {
+  color: var(--sidebar-text);
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+.eyebrow,
+.tools {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.intro {
+  max-width: 620px;
+  font-size: 1.15rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 22px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cards {
+  display: grid;
+  gap: 18px;
+}
+
+.card,
+.timeline article {
+  border-left: 4px solid var(--gold);
+  background: #ffffff;
+  padding: 22px 24px;
+  box-shadow: 0 8px 24px rgba(44, 58, 75, 0.08);
+}
+
+.divider {
+  width: 120px;
+  height: 3px;
+  background: var(--gold);
+  margin: 30px 0;
+}
+
+.card-link {
+  display: block;
+  color: var(--grey);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-link h3 {
+  color: var(--navy);
+}
+
+.card-link p {
+  color: var(--grey);
+}
+
+.card-link .tools {
+  color: var(--gold);
+}
+
+.card-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(44, 58, 75, 0.12);
+}
+
 /* Project Pages */
 
 .project-body {
-  background: linear-gradient(90deg, #e9ebf3 0%, var(--white) 18%, var(--white) 82%, #e9ebf3 100%);
+  background: linear-gradient(90deg, #dfe2ec 0%, #e9ebf3 12%, var(--white) 22%, var(--white) 78%, #e9ebf3 88%, #dfe2ec 100%);
 }
 
 .project-shell {
@@ -133,7 +365,29 @@
   margin: 0;
 }
 
+@media (max-width: 1100px) {
+  .radar-web {
+    display: none;
+  }
+}
+
 @media (max-width: 800px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 40px 28px;
+  }
+
+  .sidebar {
+    padding: 40px 28px;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
   .project-content {
     padding: 40px 24px;
   }
