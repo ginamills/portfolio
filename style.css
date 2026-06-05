@@ -24,7 +24,7 @@ body {
 .radar-web {
   position: fixed;
   top: 0;
-  width: 360px;
+  width: 520px;
   height: 100vh;
   pointer-events: auto;
   z-index: 0;
@@ -33,11 +33,11 @@ body {
 }
 
 .radar-web-left {
-  left: -150px;
+  left: -310px;
 }
 
 .radar-web-right {
-  right: -150px;
+  right: -310px;
 }
 
 .radar-group {
@@ -45,35 +45,41 @@ body {
   transition: transform 0.35s ease-out;
 }
 
-.radar-polygon {
+.radar-grid-ring {
   fill: transparent;
   stroke: var(--gold);
-  stroke-width: 1.2;
-  stroke-dasharray: 4 8;
+  stroke-width: 1;
+  stroke-dasharray: 4 9;
+  opacity: 0.45;
+}
+
+.radar-axis {
+  stroke: var(--gold);
+  stroke-width: 1;
+  opacity: 0.22;
+}
+
+.radar-data-shape {
+  fill: transparent;
+  stroke: var(--gold);
+  stroke-width: 1.7;
   opacity: 0.75;
 }
 
-.radar-spoke {
-  stroke: var(--gold);
-  stroke-width: 1;
-  opacity: 0.40;
+.radar-data-shape-b {
+  stroke-width: 1.1;
+  opacity: 0.42;
 }
 
 .radar-dot {
   fill: var(--gold);
-  opacity: 1;
-  animation: dotPulse 3s ease-in-out infinite;
+  stroke: none;
+  opacity: 0.9;
 }
 
-@keyframes dotPulse {
-  0%, 100% {
-    r: 3;
-    opacity: 0.65;
-  }
-
-  50% {
-    r: 6;
-    opacity: 1;
+@media (max-width: 1100px) {
+  .radar-web {
+    display: none;
   }
 }
 
@@ -199,12 +205,6 @@ ul {
   height: 3px;
   background: var(--gold);
   margin: 30px 0;
-}
-
-@media (max-width: 1100px) {
-  .radar-web {
-    display: none;
-  }
 }
 
 @media (max-width: 800px) {
