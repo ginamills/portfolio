@@ -356,6 +356,17 @@ ul {
   stroke-width: 1.9;
 }
 
+.dashboard-section .project-icon {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+}
+
+.dashboard-section .project-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
 .dashboard-section,
 .analysis-card,
 .insight-section article,
@@ -367,6 +378,7 @@ ul {
 .dashboard-section {
   padding: 34px 38px;
   margin-bottom: 28px;
+  border-top: 4px solid var(--gold);
 }
 
 .section-heading {
@@ -455,6 +467,18 @@ ul {
 
 .contact-item a:hover {
   opacity: 0.8;
+}
+
+.project-icon i,
+.card-icon i {
+  color: var(--gold);
+  width: 24px;
+  height: 24px;
+}
+
+.dashboard-section .project-icon i {
+  width: 28px;
+  height: 28px;
 }
 
 @media (max-width: 1100px) {
