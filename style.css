@@ -521,7 +521,6 @@ ul {
 
 .sql-analysis-section {
   margin-top: 2rem;
-  padding-left: 12px;
 }
 
 .sql-output-card {
@@ -560,8 +559,6 @@ ul {
   border-radius: 18px;
   background: #fff;
 }
-
-/* Only affects Response Time screenshot */
 
 .response-time-image {
   width: 55% !important;
