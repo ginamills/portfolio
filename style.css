@@ -521,6 +521,7 @@ ul {
 
 .sql-analysis-section {
   margin-top: 2rem;
+  padding-left: 8px;
 }
 
 .sql-output-card {
