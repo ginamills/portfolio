@@ -18,7 +18,7 @@
       <a href="../index.html" class="back-link">← Back to Portfolio</a>
 
       <header class="project-hero">
-        <p class="eyebrow">Analytics Case Study</p>
+        <p class="eyebrow">SQL Analytics Case Study</p>
 
         <h1>
           SQL Customer<br>
@@ -26,153 +26,165 @@
         </h1>
 
         <p class="intro">
-          A portfolio case study using SQL to analyse customer behaviour,
-          purchasing trends, and business performance across large datasets.
+          A SQL case study analysing 85,907 customer support interactions to identify
+          demand drivers, channel usage patterns, response-time performance, and
+          operational improvement opportunities.
         </p>
 
         <div class="divider"></div>
       </header>
 
       <section class="problem-panel">
-
         <div class="project-icon">
           <i data-lucide="target"></i>
         </div>
 
         <div>
           <h2>Business Problem</h2>
-
           <p>
-            Businesses collect large volumes of customer and transaction data,
-            but extracting useful insights can be challenging. This project uses
-            SQL queries to identify customer patterns, trends, and opportunities
-            that support better business decisions.
+            Customer support teams often handle high contact volumes without clear
+            visibility of what is driving demand. This project uses SQL to identify
+            the customer issues creating the greatest workload and highlight where
+            operational improvements could reduce inbound contact demand.
           </p>
         </div>
-
-      </section>
-
-      <section class="dashboard-section">
-
-        <div class="section-heading">
-
-          <div class="project-icon">
-            <i data-lucide="layout-dashboard"></i>
-          </div>
-
-          <h2>Dashboard Preview</h2>
-
-        </div>
-
-        <div class="dashboard-preview">
-          SQL Analysis Preview Coming Soon
-        </div>
-
       </section>
 
       <section class="analysis-grid">
 
         <article class="analysis-card">
-
           <div class="section-heading">
-
             <div class="project-icon">
               <i data-lucide="circle-help"></i>
             </div>
-
             <h2>Questions Asked</h2>
-
           </div>
 
           <ul>
-            <li>Which customers generate the highest revenue?</li>
-            <li>Which products are purchased most frequently?</li>
-            <li>How do purchasing trends change over time?</li>
-            <li>Which customer segments drive the most value?</li>
-            <li>What purchasing patterns can support business growth?</li>
+            <li>Which customer support categories generate the highest demand?</li>
+            <li>Which support channels do customers use most frequently?</li>
+            <li>Which specific issues generate the highest contact volume?</li>
+            <li>What is the average customer support response time?</li>
+            <li>What operational improvements could reduce support demand?</li>
           </ul>
-
         </article>
 
         <article class="analysis-card">
-
           <div class="section-heading">
-
             <div class="project-icon">
               <i data-lucide="chart-column"></i>
             </div>
-
             <h2>Key Metrics</h2>
-
           </div>
 
           <ul>
-            <li>Total Revenue</li>
-            <li>Customer Lifetime Value</li>
-            <li>Purchase Frequency</li>
-            <li>Top Products</li>
-            <li>Monthly Sales Trends</li>
+            <li>85,907 customer support interactions analysed</li>
+            <li>Returns: 51.33% of all contacts</li>
+            <li>Order Related: 27.02% of all contacts</li>
+            <li>Inbound: 79.32% of all interactions</li>
+            <li>Average cleaned response time: 2h 56m</li>
           </ul>
-
         </article>
 
+      </section>
+
+      <section class="dashboard-section">
+        <div class="section-heading">
+          <div class="project-icon">
+            <i data-lucide="database"></i>
+          </div>
+          <h2>SQL Analysis Outputs</h2>
+        </div>
+
+        <div class="dashboard-preview">
+          <img src="../images/sql-customer-insights/category-analysis.png" alt="SQL category analysis showing support contact volume by category">
+        </div>
+
+        <div class="dashboard-preview">
+          <img src="../images/sql-customer-insights/channel-analysis.png" alt="SQL channel analysis showing inbound, outcall and email contact distribution">
+        </div>
+
+        <div class="dashboard-preview">
+          <img src="../images/sql-customer-insights/top-subcategories.png" alt="SQL top subcategories analysis showing reverse pickup enquiry as the largest support driver">
+        </div>
+
+        <div class="dashboard-preview">
+          <img src="../images/sql-customer-insights/response-time-analysis.png" alt="SQL response time analysis showing cleaned average response time">
+        </div>
       </section>
 
       <section class="insight-section">
 
         <article>
-
           <div class="section-heading">
-
             <div class="project-icon">
               <i data-lucide="lightbulb"></i>
             </div>
-
             <h2>Key Findings</h2>
-
           </div>
 
           <p>
-            Findings will be added once the dataset has been analysed.
-            This section will summarise customer purchasing behaviour,
-            high-value customer segments, revenue trends, and product performance.
+            Returns accounted for 51.33% of all support contacts, while Order Related
+            enquiries accounted for 27.02%. Together, these two categories generated
+            78.35% of total customer support demand.
           </p>
 
+          <p>
+            Reverse Pickup Enquiry was the largest individual support issue, generating
+            22,389 contacts and representing 26.06% of all customer interactions.
+          </p>
+
+          <p>
+            Inbound support dominated customer contact, accounting for 79.32% of all
+            interactions. This suggests customers were primarily seeking real-time
+            assistance rather than using written channels.
+          </p>
         </article>
 
         <article>
-
           <div class="section-heading">
-
             <div class="project-icon">
               <i data-lucide="rocket"></i>
             </div>
-
             <h2>Recommendations</h2>
-
           </div>
 
           <p>
-            Recommendations will be added after the analysis is complete,
-            focusing on customer retention opportunities, product performance,
-            and strategies to improve business outcomes through data-driven insights.
+            Improve visibility of the reverse pickup process through proactive
+            customer updates and self-service tracking. Because Reverse Pickup Enquiries
+            alone accounted for more than one quarter of all contacts, improving this
+            process could significantly reduce support demand.
           </p>
 
+          <p>
+            Prioritise return-related process improvements, as returns generated over
+            half of all support interactions. Reducing uncertainty in the returns journey
+            would likely have the greatest operational impact.
+          </p>
         </article>
 
       </section>
 
       <section class="tools-panel">
-
         <div class="project-icon">
           <i data-lucide="database"></i>
         </div>
 
         <p>
           <strong>Tools:</strong>
-          SQL • Excel • Power BI • Data Analysis
+          PostgreSQL • DBeaver • SQL • GitHub • Data Analysis
         </p>
+      </section>
 
+      <section class="tools-panel">
+        <div class="project-icon">
+          <i data-lucide="github"></i>
+        </div>
+
+        <p>
+          <strong>Repository:</strong>
+          <a href="YOUR-GITHUB-REPO-LINK-HERE" target="_blank">View SQL code and README on GitHub</a>
+        </p>
       </section>
 
     </div>
