@@ -560,9 +560,11 @@ ul {
   background: #fff;
 }
 
+/* Only affects Response Time screenshot */
+
 .response-time-image {
-  width: 50%;
-  max-width: 400px;
+  width: 55% !important;
+  max-width: 420px !important;
   height: auto;
   margin: 0 auto;
   display: block;
