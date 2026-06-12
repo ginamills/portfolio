@@ -519,8 +519,8 @@ ul {
 
 /* SQL Customer Insights project page only */
 
-.sql-analysis-section {
-  margin-top: 2rem;
+.sql-analysis-section .section-heading {
+  margin-left: 12px;
 }
 
 .sql-output-card {
