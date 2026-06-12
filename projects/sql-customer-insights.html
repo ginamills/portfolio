@@ -137,7 +137,28 @@
           <img src="../images/sql-customer-insights/response-time-analysis.png" alt="SQL response time analysis showing cleaned average response time">
         </article>
       </section>
+<article>
+  <div class="section-heading">
+    <div class="project-icon">
+      <i data-lucide="shield-check"></i>
+    </div>
 
+    <h2>Data Quality Review</h2>
+  </div>
+
+  <p>
+    During response time analysis, several records produced negative response
+    times. Investigation showed these records contained invalid response
+    timestamps where the response value defaulted to 00:00 despite being
+    recorded after the reported time.
+  </p>
+
+  <p>
+    To improve accuracy, records with negative response times were excluded
+    from the final calculation. The cleaned dataset produced an average
+    response time of 2 hours and 56 minutes.
+  </p>
+</article>
       <section class="insight-section">
 
         <article>
