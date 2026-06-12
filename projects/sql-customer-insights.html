@@ -55,7 +55,6 @@
       </section>
 
       <section class="analysis-grid">
-
         <article class="analysis-card">
           <div class="section-heading">
             <div class="project-icon">
@@ -89,48 +88,46 @@
             <li>Average cleaned response time: 2h 56m</li>
           </ul>
         </article>
-
       </section>
 
       <section class="insight-section">
-  <article class="data-prep-card">
-    <div class="section-heading">
-      <div class="project-icon">
-        <i data-lucide="wrench"></i>
-      </div>
-      <h2>Data Preparation</h2>
-    </div>
+        <article>
+          <div class="section-heading">
+            <div class="project-icon">
+              <i data-lucide="wrench"></i>
+            </div>
+            <h2>Data Preparation</h2>
+          </div>
 
-    <p>
-      Before analysis, the raw dataset was reviewed, tested, and prepared for use
-      in PostgreSQL. Python was used to inspect the file structure, identify import
-      issues, and support debugging before loading the data into DBeaver.
-    </p>
+          <p>
+            Before analysis, the raw dataset was reviewed, tested, and prepared for use
+            in PostgreSQL. Python was used to inspect the file structure, identify import
+            issues, and support debugging before loading the data into DBeaver.
+          </p>
 
-    <p>
-      This preparation step helped confirm that the dataset could be queried
-      reliably and ensured the analysis was based on a clean, usable table.
-    </p>
-  </article>
-</section>
-      
-    <section class="sql-analysis-section">
+          <p>
+            This preparation step helped confirm that the dataset could be queried
+            reliably and ensured the analysis was based on a clean, usable table.
+          </p>
+        </article>
+      </section>
 
-  <article class="sql-output-card">
+      <section class="sql-analysis-section">
+        <article class="sql-output-card">
+          <div class="section-heading">
+            <div class="project-icon">
+              <i data-lucide="database"></i>
+            </div>
+            <h2>SQL Analysis Outputs</h2>
+          </div>
 
-    <div class="section-heading">
-      <div class="project-icon">
-        <i data-lucide="database"></i>
-      </div>
-      <h2>SQL Analysis Outputs</h2>
-    </div>
-
-    <h3>1. Category Demand</h3>
+          <h3>1. Category Demand</h3>
           <p>
             Returns and Order Related enquiries accounted for 78.35% of all customer
             contacts, indicating that process improvements in these areas would likely
             have the greatest impact on support demand.
           </p>
+
           <img src="../images/sql-customer-insights/category-analysis.png" alt="SQL category analysis showing support contact volume by category">
         </article>
 
@@ -140,6 +137,7 @@
             Inbound contacts dominated customer support interactions at 79.32%,
             suggesting customers primarily sought real-time assistance.
           </p>
+
           <img src="../images/sql-customer-insights/channel-analysis.png" alt="SQL channel analysis showing inbound, outcall and email contact distribution">
         </article>
 
@@ -149,6 +147,7 @@
             Reverse Pickup Enquiry was the largest individual issue, generating 22,389
             contacts and representing 26.06% of all customer interactions.
           </p>
+
           <img src="../images/sql-customer-insights/top-subcategories.png" alt="SQL top subcategories analysis showing reverse pickup enquiry as the largest support driver">
         </article>
 
@@ -158,10 +157,11 @@
             After excluding invalid records with negative response times, the average
             customer support response time was 2 hours 56 minutes.
           </p>
+
           <img
-  class="response-time-image"
-  src="../images/sql-customer-insights/response-time-analysis.png"
-  alt="SQL response time analysis showing cleaned average response time">
+            class="response-time-image"
+            src="../images/sql-customer-insights/response-time-analysis.png"
+            alt="SQL response time analysis showing cleaned average response time">
         </article>
       </section>
 
@@ -190,7 +190,6 @@
       </section>
 
       <section class="insight-section">
-
         <article>
           <div class="section-heading">
             <div class="project-icon">
@@ -238,11 +237,9 @@
             would likely have the greatest operational impact.
           </p>
         </article>
-
       </section>
 
       <div class="sql-footer-panels">
-
         <section class="tools-panel">
           <div class="project-icon">
             <i data-lucide="database"></i>
@@ -266,7 +263,6 @@
             </a>
           </p>
         </section>
-
       </div>
 
     </div>
