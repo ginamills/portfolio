@@ -516,3 +516,34 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+
+/* SQL Customer Insights project page only */
+
+.sql-analysis-section {
+  margin-top: 4rem;
+}
+
+.sql-output-card {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 1px solid rgba(151, 116, 58, 0.25);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.sql-output-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.sql-output-card p {
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+}
+
+.sql-output-card img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+}
