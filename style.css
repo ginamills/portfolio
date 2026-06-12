@@ -524,12 +524,13 @@ ul {
 }
 
 .sql-output-card {
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   border: 1px solid rgba(151, 116, 58, 0.25);
   border-radius: 18px;
   background: #fff;
+  box-shadow: 0 8px 24px rgba(44, 58, 75, 0.06);
 }
 
 .sql-output-card h3 {
@@ -537,13 +538,16 @@ ul {
 }
 
 .sql-output-card p {
-  max-width: 620px;
+  max-width: 680px;
   margin: 0 auto 1.5rem;
 }
 
 .sql-output-card img {
-  max-width: 100%;
-  width: auto;
+  width: 85%;
+  max-width: 900px;
   height: auto;
+  padding: 12px;
+  background: #f8f8f8;
   border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(44, 58, 75, 0.08);
 }
