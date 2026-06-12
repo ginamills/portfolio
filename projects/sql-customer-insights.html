@@ -25,8 +25,12 @@
           Insights
         </h1>
 
+        <p class="project-meta">
+          85,907 Support Interactions • PostgreSQL • DBeaver • SQL
+        </p>
+
         <p class="intro">
-          A SQL case study analysing 85,907 customer support interactions to identify
+          A SQL case study analysing customer support interactions to identify
           demand drivers, channel usage patterns, response-time performance, and
           operational improvement opportunities.
         </p>
@@ -97,33 +101,38 @@
         </div>
 
         <article class="sql-output-card">
-          <h3>Category Demand</h3>
+          <h3>1. Category Demand</h3>
           <p>
-            Returns and Order Related enquiries generated 78.35% of total support demand.
+            Returns and Order Related enquiries accounted for 78.35% of all customer
+            contacts, indicating that process improvements in these areas would likely
+            have the greatest impact on support demand.
           </p>
           <img src="../images/sql-customer-insights/category-analysis.png" alt="SQL category analysis showing support contact volume by category">
         </article>
 
         <article class="sql-output-card">
-          <h3>Channel Usage</h3>
+          <h3>2. Channel Usage</h3>
           <p>
-            Inbound contacts dominated customer support interactions at 79.32%.
+            Inbound contacts dominated customer support interactions at 79.32%,
+            suggesting customers primarily sought real-time assistance.
           </p>
           <img src="../images/sql-customer-insights/channel-analysis.png" alt="SQL channel analysis showing inbound, outcall and email contact distribution">
         </article>
 
         <article class="sql-output-card">
-          <h3>Top Support Issues</h3>
+          <h3>3. Top Support Issues</h3>
           <p>
-            Reverse Pickup Enquiry was the largest issue, representing 26.06% of all contacts.
+            Reverse Pickup Enquiry was the largest individual issue, generating 22,389
+            contacts and representing 26.06% of all customer interactions.
           </p>
           <img src="../images/sql-customer-insights/top-subcategories.png" alt="SQL top subcategories analysis showing reverse pickup enquiry as the largest support driver">
         </article>
 
         <article class="sql-output-card">
-          <h3>Response Time</h3>
+          <h3>4. Response Time Analysis</h3>
           <p>
-            After cleaning invalid timestamps, the average response time was 2 hours 56 minutes.
+            After excluding invalid records with negative response times, the average
+            customer support response time was 2 hours 56 minutes.
           </p>
           <img src="../images/sql-customer-insights/response-time-analysis.png" alt="SQL response time analysis showing cleaned average response time">
         </article>
