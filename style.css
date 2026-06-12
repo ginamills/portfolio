@@ -551,3 +551,9 @@ ul {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(44, 58, 75, 0.08);
 }
+
+.sql-footer-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
