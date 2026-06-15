@@ -574,6 +574,20 @@ ul {
   gap: 4px;
 }
 
+.dashboard-image {
+  width: 75%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+}
+
+.dashboard-image:hover {
+  transform: scale(1.01);
+}
+
 .dashboard-preview-note {
   text-align: center;
   margin-top: 12px;
