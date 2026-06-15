@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Customer Experience Dashboard | Gina Mills</title>
+  <title>Customer Experience & Satisfaction Dashboard | Gina Mills</title>
   <link rel="icon" type="image/png" href="../favicon.png">
 
   <link rel="stylesheet" href="../style.css" />
@@ -18,101 +18,90 @@
       <a href="../index.html" class="back-link">← Back to Portfolio</a>
 
       <header class="project-hero">
-        <p class="eyebrow">Analytics Case Study</p>
+        <p class="eyebrow">Power BI Analytics Case Study</p>
 
         <h1>
           Customer Experience<br>
-          Dashboard
+          & Satisfaction
         </h1>
 
+        <p class="project-meta">
+          85,907 Support Interactions • Power BI • Customer Analytics • Data Visualisation
+        </p>
+
         <p class="intro">
-          A portfolio case study exploring customer reviews,
-          satisfaction scores, support interactions, and
-          experience drivers to better understand customer sentiment.
+          A Power BI dashboard analysing customer satisfaction, support volume,
+          sentiment, issue types, product categories, and support channel performance
+          to identify customer experience trends and operational improvement opportunities.
         </p>
 
         <div class="divider"></div>
       </header>
 
       <section class="problem-panel">
-
         <div class="project-icon">
           <i data-lucide="target"></i>
         </div>
 
         <div>
           <h2>Business Problem</h2>
-
           <p>
-            Customers interact with products and support teams through
-            multiple channels. This project investigates which factors
-            most strongly influence customer satisfaction and where
-            opportunities exist to improve customer experience.
+            Customer support leaders need clear visibility of which channels, issue types,
+            and product categories are driving support demand and customer satisfaction.
+            This dashboard was designed to turn customer interaction data into an executive
+            view of performance, sentiment, and improvement opportunities.
           </p>
         </div>
-
       </section>
 
       <section class="dashboard-section">
-
         <div class="section-heading">
-
           <div class="project-icon">
             <i data-lucide="layout-dashboard"></i>
           </div>
-
           <h2>Dashboard Preview</h2>
-
         </div>
 
-        <div class="dashboard-preview">
-          Dashboard Preview Coming Soon
-        </div>
-
+        <img
+          class="dashboard-image"
+          src="../images/customer-experience-dashboard.png"
+          alt="Customer Experience and Satisfaction Power BI dashboard showing CSAT, support cases, channel performance, sentiment, issue category volume, product category satisfaction, and support flow analysis">
       </section>
 
       <section class="analysis-grid">
 
         <article class="analysis-card">
-
           <div class="section-heading">
-
             <div class="project-icon">
               <i data-lucide="circle-help"></i>
             </div>
-
             <h2>Questions Asked</h2>
-
           </div>
 
           <ul>
-            <li>Which factors have the strongest impact on customer satisfaction?</li>
-            <li>What themes appear most often in customer feedback?</li>
-            <li>How do support metrics relate to satisfaction scores?</li>
+            <li>Which support channels achieve the strongest customer satisfaction?</li>
+            <li>Which issue types generate the highest support volume?</li>
+            <li>How does customer satisfaction vary across product categories?</li>
+            <li>What proportion of customer interactions result in positive sentiment?</li>
+            <li>Where are there data quality gaps that could affect customer insight reporting?</li>
           </ul>
-
         </article>
 
         <article class="analysis-card">
-
           <div class="section-heading">
-
             <div class="project-icon">
               <i data-lucide="chart-column"></i>
             </div>
-
             <h2>Key Metrics</h2>
-
           </div>
 
           <ul>
-            <li>Customer Satisfaction Score</li>
-            <li>Net Promoter Score</li>
-            <li>Review Sentiment</li>
-            <li>Resolution Time</li>
-            <li>Customer Feedback Themes</li>
+            <li>85,907 total support interactions analysed</li>
+            <li>Average CSAT score: 4.24 out of 5</li>
+            <li>1,371 support agents across 3 support channels</li>
+            <li>40 unique supervisors</li>
+            <li>Sentiment breakdown by positive, negative, and neutral interactions</li>
           </ul>
-
         </article>
 
       </section>
@@ -120,59 +109,90 @@
       <section class="insight-section">
 
         <article>
+          <section class="insight-section">
 
-          <div class="section-heading">
+  <article>
 
-            <div class="project-icon">
-              <i data-lucide="lightbulb"></i>
-            </div>
+```
+<div class="section-heading">
 
-            <h2>Key Findings</h2>
+  <div class="project-icon">
+    <i data-lucide="lightbulb"></i>
+  </div>
 
-          </div>
+  <h2>Key Findings</h2>
 
-          <p>
-            Findings will be added once the dataset has been analysed.
-            This section will summarise customer satisfaction trends,
-            recurring feedback themes, and the key drivers influencing
-            customer experience outcomes.
-          </p>
+</div>
 
-        </article>
+<p>
+  Outbound support achieved the highest average customer satisfaction score,
+  while email recorded the lowest CSAT result across the support channels.
+</p>
 
-        <article>
+<p>
+  Returns represented the highest volume issue category while maintaining
+  strong customer satisfaction, demonstrating that high support demand did
+  not necessarily correspond with poor customer experience outcomes.
+</p>
 
-          <div class="section-heading">
+<p>
+  Data quality review identified two reporting limitations. A significant
+  proportion of support interactions lacked product categorisation, resulting
+  in a large "Unclassified" category. Additionally, the reported support
+  agent count appeared unusually high relative to overall interaction volume,
+  suggesting potential duplication, historical records, or inconsistent
+  source data definitions.
+</p>
+```
 
-            <div class="project-icon">
-              <i data-lucide="rocket"></i>
-            </div>
+  </article>
 
-            <h2>Recommendations</h2>
+  <article>
 
-          </div>
+```
+<div class="section-heading">
 
-          <p>
-            Recommendations will be added after the analysis is complete,
-            with a focus on improving customer satisfaction, reducing
-            friction points, and enhancing overall customer experience.
-          </p>
+  <div class="project-icon">
+    <i data-lucide="rocket"></i>
+  </div>
 
-        </article>
+  <h2>Recommendations</h2>
 
-      </section>
+</div>
+
+<p>
+  Introduce a mandatory product category field within the customer support
+  workflow to reduce uncategorised records and improve the accuracy of
+  product-level reporting.
+</p>
+
+<p>
+  Review agent and user identifiers within the source system to determine
+  whether duplicate, inactive, or historical records are inflating the
+  reported support agent count.
+</p>
+
+<p>
+  Continue monitoring high-volume issue types such as returns and
+  order-related enquiries, while prioritising improvement initiatives
+  for lower-performing categories including product queries and email
+  support interactions.
+</p>
+```
+
+  </article>
+
+</section>
 
       <section class="tools-panel">
-
         <div class="project-icon">
           <i data-lucide="database"></i>
         </div>
 
         <p>
           <strong>Tools:</strong>
-          Power BI • Excel • Customer Insights • Data Visualisation
+          Power BI • Excel • Data Visualisation • Customer Insights • Dashboard Design
         </p>
-
       </section>
 
     </div>
