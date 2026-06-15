@@ -573,3 +573,10 @@ ul {
   flex-direction: column;
   gap: 4px;
 }
+
+.dashboard-preview-note {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #808183;
+}
