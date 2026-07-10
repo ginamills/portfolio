@@ -57,24 +57,84 @@
           </ul>
         </article>
       </section>
-      <section class="sql-analysis-section">
-        <article class="sql-output-card">
-          <div class="section-heading"><div class="project-icon"><i data-lucide="table-2"></i></div><h2>Excel Workforce Model</h2></div>
-          <h3>1. Eight-Week Historical Arrivals</h3>
-          <p>Eight weeks of simulated interval-level arrivals were modelled to identify recurring workload patterns across weekdays and weekends. The heatmap makes demand peaks immediately visible, particularly around the lunchtime period.</p>
-          <img src="../images/workforce-historical-arrivals.png" alt="Eight-week historical arrivals heatmap showing contact demand by day and interval">
-        </article>
-        <article class="sql-output-card">
-          <h3>2. Required Staffing by Interval</h3>
-          <p>Historical arrivals were converted into interval-level staffing requirements using workforce planning assumptions including service level, average handle time, occupancy, and shrinkage.</p>
-          <img src="../images/workforce-required-fte.png" alt="Required FTE heatmap showing staffing requirements by day and interval">
-        </article>
-        <article class="sql-output-card">
-          <h3>3. Coverage Gap Analysis</h3>
-          <p>Required staffing was compared with scheduled coverage to identify periods of overstaffing and understaffing. The strongest shortages occurred around the midday demand peak, while most other intervals remained broadly aligned.</p>
-          <img src="../images/workforce-coverage-gap.png" alt="Coverage gap heatmap showing staffing surplus and shortage by day and interval">
-        </article>
-      </section>
+<section class="sql-analysis-section">
+
+  <article class="sql-output-card">
+    <div class="section-heading">
+      <div class="project-icon">
+        <i data-lucide="table-2"></i>
+      </div>
+      <h2>Excel Workforce Model</h2>
+    </div>
+
+    <h3>1. Eight-Week Historical Arrivals</h3>
+
+    <p>
+      Eight weeks of simulated interval-level arrivals were modelled to identify
+      recurring workload patterns across weekdays and weekends. The heatmap makes
+      demand peaks immediately visible, particularly around the lunchtime period.
+    </p>
+
+    <a href="#arrivals-full">
+      <img
+        src="../images/workforce-historical-arrivals.png"
+        alt="Eight-week historical arrivals heatmap showing contact demand by day and interval">
+    </a>
+
+    <a href="#arrivals-close" id="arrivals-full" class="image-lightbox">
+      <img
+        src="../images/workforce-historical-arrivals.png"
+        alt="Expanded eight-week historical arrivals heatmap">
+    </a>
+  </article>
+
+
+  <article class="sql-output-card">
+    <h3>2. Required Staffing by Interval</h3>
+
+    <p>
+      Historical arrivals were converted into interval-level staffing requirements
+      using workforce planning assumptions including service level, average handle
+      time, occupancy, and shrinkage.
+    </p>
+
+    <a href="#fte-full">
+      <img
+        src="../images/workforce-required-fte.png"
+        alt="Required FTE heatmap showing staffing requirements by day and interval">
+    </a>
+
+    <a href="#fte-close" id="fte-full" class="image-lightbox">
+      <img
+        src="../images/workforce-required-fte.png"
+        alt="Expanded required FTE heatmap">
+    </a>
+  </article>
+
+
+  <article class="sql-output-card">
+    <h3>3. Coverage Gap Analysis</h3>
+
+    <p>
+      Required staffing was compared with scheduled coverage to identify periods
+      of overstaffing and understaffing. The strongest shortages occurred around
+      the midday demand peak, while most other intervals remained broadly aligned.
+    </p>
+
+    <a href="#coverage-full">
+      <img
+        src="../images/workforce-coverage-gap.png"
+        alt="Coverage gap heatmap showing staffing surplus and shortage by day and interval">
+    </a>
+
+    <a href="#coverage-close" id="coverage-full" class="image-lightbox">
+      <img
+        src="../images/workforce-coverage-gap.png"
+        alt="Expanded coverage gap heatmap">
+    </a>
+  </article>
+
+</section>
       <section class="insight-section">
         <article>
           <div class="section-heading"><div class="project-icon"><i data-lucide="lightbulb"></i></div><h2>Key Findings</h2></div>
