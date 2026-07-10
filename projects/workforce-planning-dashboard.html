@@ -3,183 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workforce Planning Dashboard | Gina Mills</title>
+  <title>Workforce Planning & Coverage Dashboard | Gina Mills</title>
   <link rel="icon" type="image/png" href="../favicon.png">
-
   <link rel="stylesheet" href="../style.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body class="project-body">
-
   <main class="project-shell">
     <div class="project-content">
-
       <a href="../index.html" class="back-link">← Back to Portfolio</a>
-
       <header class="project-hero">
-        <p class="eyebrow">Analytics Case Study</p>
-
-        <h1>
-          Workforce<br>
-          Planning
-        </h1>
-
-        <p class="intro">
-          A portfolio case study exploring workforce demand,
-          staffing requirements, forecasting accuracy, and
-          resource planning opportunities.
-        </p>
-
+        <p class="eyebrow">Workforce Analytics Case Study</p>
+        <h1>Workforce Planning<br>&amp; Coverage Dashboard</h1>
+        <p class="project-meta">Excel • Power BI • Forecasting • Workforce Planning</p>
+        <p class="intro">A workforce planning case study combining an eight-week Excel demand model with a Power BI dashboard to analyse staffing requirements, intraday coverage, service performance, and schedule optimisation opportunities.</p>
         <div class="divider"></div>
       </header>
-
       <section class="problem-panel">
-
-        <div class="project-icon">
-          <i data-lucide="target"></i>
-        </div>
-
+        <div class="project-icon"><i data-lucide="target"></i></div>
         <div>
           <h2>Business Problem</h2>
-
-          <p>
-            Organisations must balance staffing levels against changing
-            demand while maintaining service performance. This project
-            investigates workforce gaps, forecasting accuracy, and
-            planning opportunities to support better operational outcomes.
-          </p>
+          <p>Contact centre leaders need enough staff available throughout the day to meet customer demand without creating unnecessary idle capacity. This project models interval-level contact arrivals, converts demand into required staffing, and identifies where scheduled coverage is misaligned with workload.</p>
         </div>
-
       </section>
-
       <section class="dashboard-section">
-
         <div class="section-heading">
-
-          <div class="project-icon">
-            <i data-lucide="layout-dashboard"></i>
-          </div>
-
+          <div class="project-icon"><i data-lucide="layout-dashboard"></i></div>
           <h2>Dashboard Preview</h2>
-
         </div>
-
-        <div class="dashboard-preview">
-          Dashboard Preview Coming Soon
-        </div>
-
+        <p>The final Power BI dashboard brings together forecast demand, required FTE, coverage gaps, service performance, abandonment, and intraday staffing patterns in one executive view.</p>
+        <a href="#dashboard-full"><img id="dashboard-preview" class="dashboard-image" src="../images/workforce-planning-and-coverage-dashboard.png" alt="Workforce Planning and Coverage Dashboard"></a>
+        <a href="#dashboard-preview" id="dashboard-full"><img class="dashboard-image-expanded" src="../images/workforce-planning-and-coverage-dashboard.png" alt="Expanded Workforce Planning and Coverage Dashboard"></a>
       </section>
-
       <section class="analysis-grid">
-
         <article class="analysis-card">
-
-          <div class="section-heading">
-
-            <div class="project-icon">
-              <i data-lucide="circle-help"></i>
-            </div>
-
-            <h2>Questions Asked</h2>
-
-          </div>
-
+          <div class="section-heading"><div class="project-icon"><i data-lucide="circle-help"></i></div><h2>Questions Asked</h2></div>
           <ul>
-            <li>When do staffing shortages occur?</li>
-            <li>How accurately does forecast demand match actual demand?</li>
-            <li>Where could workforce planning improve service outcomes?</li>
+            <li>When does contact demand peak across the operating day?</li>
+            <li>How many FTE are required to meet expected demand?</li>
+            <li>Where do the largest staffing shortages occur?</li>
+            <li>How do coverage gaps affect SLA, AHT, and abandonment?</li>
+            <li>Where could schedules be adjusted to improve efficiency?</li>
           </ul>
-
         </article>
-
         <article class="analysis-card">
-
-          <div class="section-heading">
-
-            <div class="project-icon">
-              <i data-lucide="chart-column"></i>
-            </div>
-
-            <h2>Key Metrics</h2>
-
-          </div>
-
+          <div class="section-heading"><div class="project-icon"><i data-lucide="chart-column"></i></div><h2>Key Metrics</h2></div>
           <ul>
-            <li>Forecast Accuracy</li>
-            <li>Required Staffing</li>
-            <li>Actual Staffing</li>
-            <li>Demand Volume</li>
-            <li>Occupancy</li>
+            <li>9,229 forecast contacts across seven days</li>
+            <li>Peak requirement of 12 FTE</li>
+            <li>Largest coverage gap of 4 FTE</li>
+            <li>Peak demand period at 1:00 PM</li>
+            <li>Service level target of 80%</li>
           </ul>
-
         </article>
-
       </section>
-
+      <section class="sql-analysis-section">
+        <article class="sql-output-card">
+          <div class="section-heading"><div class="project-icon"><i data-lucide="table-2"></i></div><h2>Excel Workforce Model</h2></div>
+          <h3>1. Eight-Week Historical Arrivals</h3>
+          <p>Eight weeks of simulated interval-level arrivals were modelled to identify recurring workload patterns across weekdays and weekends. The heatmap makes demand peaks immediately visible, particularly around the lunchtime period.</p>
+          <img src="../images/workforce-historical-arrivals.png" alt="Eight-week historical arrivals heatmap showing contact demand by day and interval">
+        </article>
+        <article class="sql-output-card">
+          <h3>2. Required Staffing by Interval</h3>
+          <p>Historical arrivals were converted into interval-level staffing requirements using workforce planning assumptions including service level, average handle time, occupancy, and shrinkage.</p>
+          <img src="../images/workforce-required-fte.png" alt="Required FTE heatmap showing staffing requirements by day and interval">
+        </article>
+        <article class="sql-output-card">
+          <h3>3. Coverage Gap Analysis</h3>
+          <p>Required staffing was compared with scheduled coverage to identify periods of overstaffing and understaffing. The strongest shortages occurred around the midday demand peak, while most other intervals remained broadly aligned.</p>
+          <img src="../images/workforce-coverage-gap.png" alt="Coverage gap heatmap showing staffing surplus and shortage by day and interval">
+        </article>
+      </section>
       <section class="insight-section">
-
         <article>
-
-          <div class="section-heading">
-
-            <div class="project-icon">
-              <i data-lucide="lightbulb"></i>
-            </div>
-
-            <h2>Key Findings</h2>
-
-          </div>
-
-          <p>
-            Findings will be added once the dataset has been analysed.
-            This section will summarise workforce demand patterns,
-            forecast performance, staffing gaps, and planning trends.
-          </p>
-
+          <div class="section-heading"><div class="project-icon"><i data-lucide="lightbulb"></i></div><h2>Key Findings</h2></div>
+          <p>The busiest operational period occurred between 12:00 PM and 2:00 PM, with demand peaking at approximately 1:00 PM.</p>
+          <p>Staffing shortages during the lunch period coincided with reduced service levels, longer handle times, and increased customer abandonment.</p>
+          <p>Monday and Tuesday required the greatest staffing coverage, while weekend demand was significantly lower and created opportunities for improved schedule efficiency.</p>
+          <p>Outside the lunchtime peak, scheduled staffing was generally well aligned with workload, indicating a targeted scheduling issue rather than an organisation-wide capacity shortage.</p>
         </article>
-
         <article>
-
-          <div class="section-heading">
-
-            <div class="project-icon">
-              <i data-lucide="rocket"></i>
-            </div>
-
-            <h2>Recommendations</h2>
-
-          </div>
-
-          <p>
-            Recommendations will be added after the analysis is complete,
-            with a focus on improving workforce forecasting,
-            staffing allocation, and operational efficiency.
-          </p>
-
+          <div class="section-heading"><div class="project-icon"><i data-lucide="rocket"></i></div><h2>Recommendations</h2></div>
+          <p>Reallocate breaks and lunches away from the 12:00 PM to 2:00 PM peak and introduce staggered or split shifts to strengthen midday coverage.</p>
+          <p>Monitor SLA, abandonment, and average handle time alongside FTE variance to measure whether schedule changes improve customer outcomes.</p>
+          <p>Review weekend staffing patterns for potential efficiency gains while maintaining adequate coverage for lower-volume demand.</p>
+          <p>Refresh the workforce model regularly as new interval data becomes available so staffing assumptions remain aligned with changing demand.</p>
         </article>
-
       </section>
-
       <section class="tools-panel">
-
-        <div class="project-icon">
-          <i data-lucide="database"></i>
-        </div>
-
-        <p>
-          <strong>Tools:</strong>
-          Power BI • Forecasting • Workforce Planning • Excel
-        </p>
-
+        <div class="project-icon"><i data-lucide="database"></i></div>
+        <p><strong>Tools:</strong> Excel • Power BI • Power Query • Deneb • Workforce Forecasting • Capacity Analysis • Data Visualisation</p>
       </section>
-
     </div>
   </main>
-
-  <script>
-    lucide.createIcons();
-  </script>
-
+  <script>lucide.createIcons();</script>
 </body>
 </html>
