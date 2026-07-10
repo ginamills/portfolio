@@ -615,3 +615,46 @@ ul {
   border-radius: 12px;
   cursor: zoom-out;
 }
+
+/* Full-screen expandable case study images */
+
+.image-lightbox {
+  display: none;
+}
+
+.image-lightbox:target {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(15, 20, 30, 0.95);
+  cursor: zoom-out;
+}
+
+.image-lightbox img {
+  width: auto;
+  height: auto;
+  max-width: 96vw;
+  max-height: 94vh;
+  padding: 0;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  object-fit: contain;
+}
+
+.sql-output-card > a:not(.image-lightbox) {
+  display: block;
+  cursor: zoom-in;
+}
+
+.sql-output-card > a:not(.image-lightbox) img {
+  transition: transform 0.2s ease;
+}
+
+.sql-output-card > a:not(.image-lightbox):hover img {
+  transform: scale(1.01);
+}
